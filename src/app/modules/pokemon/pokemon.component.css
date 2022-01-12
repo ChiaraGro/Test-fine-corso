@@ -1,0 +1,7 @@
+.container-fluid{
+  background-image: url(../../../assets/images/image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
