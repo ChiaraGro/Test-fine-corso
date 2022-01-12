@@ -12,9 +12,26 @@ export class PokemonComponent implements OnInit {
   constructor(private pokemonService: PokemonService) { }
 
   pokemon!: IPokemon;
+  pokemonCatched: IPokemon[] = [];
+  pokemonRejected: IPokemon[] = []
 
   ngOnInit(): void {
-    this.pokemonService.getPokemon().subscribe((response) => this.pokemon = response)
+    this.getPokemon()
   }
+
+  getPokemon(){
+      this.pokemonService.getPokemon().subscribe((response) => this.pokemon = response)
+  }
+
+  catch(){
+    this.pokemonCatched.push(this.pokemon);
+    this.getPokemon();
+  }
+
+  reject(){
+    this.pokemonRejected.push(this.pokemon);
+    this.getPokemon();
+  }
+
 
 }

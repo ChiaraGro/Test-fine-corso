@@ -15,8 +15,8 @@
     </div>
   </div>
   <div class="buttons d-flex justify-content-center align-center my-3">
-    <button>Cattura</button>
-    <button>Rifiuta</button>
+    <button (click)="catch()">Cattura</button>
+    <button (click)="reject()">Rifiuta</button>
   </div>
   <div class="detail bg-primary">
     <p>E' apparso un {{pokemon.name | titlecase}} selvatico</p>

@@ -5,12 +5,14 @@ import { CommonModule } from '@angular/common';
 import { PokemonRoutingModule } from './pokemon-routing.module';
 import { PokemonComponent } from './pokemon.component';
 import { CatchComponent } from './components/catch/catch.component';
+import { RejectComponent } from './components/reject/reject.component';
 
 
 @NgModule({
   declarations: [
     PokemonComponent,
-    CatchComponent
+    CatchComponent,
+    RejectComponent
   ],
   imports: [
     CommonModule,
