@@ -2,7 +2,7 @@
 
 <app-catch [pokemonCatched]="pokemonCatched"></app-catch>
 
-<div class="container card d-flex flex-column h-50">
+<div class="container card d-flex flex-column justify-content-between w-50 h-50">
   <div class="d-flex justify-content-between align-center">
     <div class="pokemon-details mx-2">
       <h2>Dettagli</h2>
@@ -23,6 +23,10 @@
   </div>
   <div class="detail bg-primary">
     <p>E' apparso un {{pokemon.name | titlecase}} selvatico</p>
+  </div>
+
+  <div *ngIf="pokemonCatched.length > 5">
+  <p class="text-danger">Attenzione! La tua squadra è piena!</p>
   </div>
 </div>
 

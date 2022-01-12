@@ -9,9 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CatchComponent implements OnInit {
   @Input() pokemonCatched!: IPokemon[];
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  // remove(){
+  //   let index =
+  //   this.pokemonCatched.splice(index, 1);
+  // }
+
 
 }

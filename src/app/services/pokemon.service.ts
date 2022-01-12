@@ -14,4 +14,16 @@ export class PokemonService {
    const pokemonId = Math.ceil(Math.random() * 898);
    return this.http.get<IPokemon>(`${environment.apiUrl}${pokemonId}`)
    }
+
+
+  storageCatched(pokemonCatched: IPokemon[]): void{
+    let data = JSON.parse(localStorage.getItem('pokemonCatched')!);
+    if(data){
+      data = {...data, ...pokemonCatched};
+      localStorage.setItem('pokemonCatched', JSON.stringify(data));
+    } else {
+      localStorage.setItem('pokemonCatched', JSON.stringify(pokemonCatched));
+    }
+  }
+
 }

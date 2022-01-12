@@ -25,6 +25,7 @@ export class PokemonComponent implements OnInit {
 
   catch(){
     this.pokemonCatched.push(this.pokemon);
+    this.pokemonService.storageCatched(this.pokemonCatched);
     this.getPokemon();
   }
 
