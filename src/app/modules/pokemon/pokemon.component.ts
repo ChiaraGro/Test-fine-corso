@@ -31,8 +31,12 @@ export class PokemonComponent implements OnInit {
 
   reject(){
     this.pokemonRejected.push(this.pokemon);
+    this.pokemonService.storageRejected(this.pokemonRejected);
     this.getPokemon();
   }
 
-
+  remove(){
+    const index = this.pokemonCatched.indexOf(this.pokemon);
+    this.pokemonCatched.splice(index, 1);
+  }
 }

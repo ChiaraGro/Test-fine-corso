@@ -1,14 +1,15 @@
 export interface IPokemon {
+  find(arg0: (pokemon: any) => boolean): IPokemon;
   name: string;
   id: number;
   height: number;
   weight: number;
-  moves: IMovTyp[];
-  type: IMovTyp[];
+  moves: IMove[];
+  type: IMove[];
   sprites: ISprite;
 }
 
-export interface IMovTyp {
+export interface IMove {
   typmove: {
     name: string;
     url: string;
