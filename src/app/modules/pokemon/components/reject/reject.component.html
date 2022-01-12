@@ -1,4 +1,4 @@
-<div *ngIf="pokemonRejected.length > 0">
+<div *ngIf="pokemonRejected.length > 0" class="rejected">
   <h4>Pokemon rifiutati: {{pokemonRejected.length}}</h4>
   <div *ngFor="let pokemon of pokemonRejected" class="card d-flex my-2">
     <img src="{{ pokemon.sprites.front_default }}" alt="" />

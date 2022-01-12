@@ -23,5 +23,12 @@ export class DetailComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params.id;
     this.pokemon = this.pokemons.find((pokemon) => pokemon.id == id);
   }
+  //trovare pokemon tramite id per il detail
+
+  // detail(id: number): void {
+  //   this.pokemonService.getPokemon(); //cercare il pokemon dal service- devo cercare tramite id
+
+  //   this.router.navigate(['pokemon', 'detail', id]); //mi sposto sulla pagina dettagli
+  // }
 
 }

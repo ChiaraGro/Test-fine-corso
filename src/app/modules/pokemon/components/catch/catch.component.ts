@@ -22,15 +22,11 @@ export class CatchComponent implements OnInit {
     this.remove.emit(pokemon);
   }
 
+  //aggiungere metodo in html al click
   detail(id: number): void {
-    this.pokemonService.getPokemon(); //cercare il pokemon dal service
+    this.pokemonService.getPokemon(); //cercare il pokemon dal service- devo cercare tramite id
 
     this.router.navigate(['pokemon', 'detail', id]); //mi sposto sulla pagina dettagli
   }
 
-  // getPokemon() {
-  //   const id = this.activatedRoute.snapshot.params.id;
-  //   this.pokemon = this.pokemons.find((pokemon) => pokemon.id == id);
-  // }
-  //cercare per id
 }
