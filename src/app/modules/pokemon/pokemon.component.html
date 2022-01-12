@@ -1,5 +1,8 @@
-<p>pokemon works!</p>
-<div class="container card d-flex flex-column">
+<div class="container-fluid d-flex py-3">
+
+<app-catch [pokemonCatched]="pokemonCatched"></app-catch>
+
+<div class="container card d-flex flex-column h-50">
   <div class="d-flex justify-content-between align-center">
     <div class="pokemon-details mx-2">
       <h2>Dettagli</h2>
@@ -15,7 +18,7 @@
     </div>
   </div>
   <div class="buttons d-flex justify-content-center align-center my-3">
-    <button (click)="catch()">Cattura</button>
+    <button (click)="catch()" [disabled]=" pokemonCatched.length > 5">Cattura</button>
     <button (click)="reject()">Rifiuta</button>
   </div>
   <div class="detail bg-primary">
@@ -23,5 +26,5 @@
   </div>
 </div>
 
-
-<app-catch></app-catch>
+<app-reject [pokemonRejected]="pokemonRejected"></app-reject>
+</div>

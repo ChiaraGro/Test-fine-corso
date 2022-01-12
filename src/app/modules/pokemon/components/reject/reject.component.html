@@ -1,1 +1,4 @@
-<p>reject works!</p>
+<div *ngFor="let pokemon of pokemonRejected" class="card my-2">
+  <img src="{{pokemon.sprites.front_default}}" alt="">
+  {{pokemon.name | titlecase}}
+</div>

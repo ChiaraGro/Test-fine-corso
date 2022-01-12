@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { IPokemon } from './../../../../models/pokemon';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-reject',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reject.component.css']
 })
 export class RejectComponent implements OnInit {
+  @Input() pokemonRejected!: IPokemon[];
 
   constructor() { }
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { IPokemon } from './../../../../models/pokemon';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-catch',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catch.component.css']
 })
 export class CatchComponent implements OnInit {
+  @Input() pokemonCatched!: IPokemon[];
 
   constructor() { }
 
